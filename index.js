@@ -52,7 +52,7 @@ function makeSound(key) {
 //Animation
 
 function buttonAnimation(currentKey) {
-  cosole.log("mihcael new git");
+  cosole.log("new git");
   var activeButtun = document.querySelector("." + currentKey);
   activeButtun.classList.add("pressed");
 
