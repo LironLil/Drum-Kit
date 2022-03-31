@@ -1,66 +1,63 @@
 //Detecting Butten Press
-var numOfDrumButtuns= document.querySelectorAll(".drum").length;
-for (var i=0; i< numOfDrumButtuns; i++){
-  document.querySelectorAll(".drum")[i].addEventListener("click", function(){
-
+var numOfDrumButtuns = document.querySelectorAll(".drum").length;
+for (var i = 0; i < numOfDrumButtuns; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     var buttunInnerHTML = this.innerHTML;
     makeSound(buttunInnerHTML);
     buttonAnimation(buttunInnerHTML);
-
- });
+  });
 }
 //Detecting Keyboard Press
-document.addEventListener('keydown', function(event){
+document.addEventListener("keydown", function (event) {
   makeSound(event.key);
   buttonAnimation(event.key);
+});
 
-})
-
-function makeSound (key){
+function makeSound(key) {
   switch (key) {
-    case 'w':
-    var tom1 = new Audio('sounds/tom-1.mp3');
-    tom1.play();
+    case "w":
+      var tom1 = new Audio("sounds/tom-1.mp3");
+      tom1.play();
       break;
-    case 'a':
-    var tom2 = new Audio('sounds/tom-2.mp3');
-    tom2.play();
+    case "a":
+      var tom2 = new Audio("sounds/tom-2.mp3");
+      tom2.play();
       break;
-    case 's':
-    var tom3 = new Audio('sounds/tom-3.mp3');
-    tom3.play();
+    case "s":
+      var tom3 = new Audio("sounds/tom-3.mp3");
+      tom3.play();
       break;
-    case 'd':
-    var tom4 = new Audio('sounds/tom-4.mp3');
-    tom4.play();
+    case "d":
+      var tom4 = new Audio("sounds/tom-4.mp3");
+      tom4.play();
       break;
-    case 'j':
-    var snare = new Audio('sounds/snare.mp3');
-    snare.play();
+    case "j":
+      var snare = new Audio("sounds/snare.mp3");
+      snare.play();
       break;
-    case 'k':
-    var crash = new Audio('sounds/crash.mp3');
-    crash.play();
+    case "k":
+      var crash = new Audio("sounds/crash.mp3");
+      crash.play();
       break;
-    case 'l':
-    var kickbass = new Audio('sounds/kick-bass.mp3');
-    kickbass.play();
+    case "l":
+      var kickbass = new Audio("sounds/kick-bass.mp3");
+      kickbass.play();
       break;
 
-    default: cosole.log(buttunInnerHTML);
-
+    default:
+      cosole.log(buttunInnerHTML);
   }
-
 }
 
 //Animation
 
- function buttonAnimation(currentKey){
-   var activeButtun = document.querySelector("."+ currentKey)
-   activeButtun.classList.add("pressed");
+function buttonAnimation(currentKey) {
+  cosole.log("mihcael new git");
+  var activeButtun = document.querySelector("." + currentKey);
+  activeButtun.classList.add("pressed");
 
-   //Time Out
-  setTimeout(function(){
-  activeButtun.classList.remove("pressed");
-},100);
-     }
+  //Time Out
+  setTimeout(function () {
+    activeButtun.classList.remove("pressed");
+  }, 100);
+}
